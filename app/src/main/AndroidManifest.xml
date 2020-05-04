@@ -1,0 +1,63 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.twosixlabs.exampleupals">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+
+        <uses-library android:name="com.twosixlabs.peandroid.pal"/>
+
+        <service android:name=".AvailabilityBitmapMicroPAL"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.PRIVATE_DATA_PROVIDER_SERVICE">
+            <intent-filter>
+                <action android:name="android.privatedata.MicroPALProviderService" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".NameToNumberPAL"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.PRIVATE_DATA_PROVIDER_SERVICE">
+            <intent-filter>
+                <action android:name="android.privatedata.MicroPALProviderService" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".NumbersOnlyPAL"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.PRIVATE_DATA_PROVIDER_SERVICE">
+            <intent-filter>
+                <action android:name="android.privatedata.MicroPALProviderService" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".NumberToNamePAL"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.PRIVATE_DATA_PROVIDER_SERVICE">
+            <intent-filter>
+                <action android:name="android.privatedata.MicroPALProviderService" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".ZipcodeMicroPAL"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.PRIVATE_DATA_PROVIDER_SERVICE">
+            <intent-filter>
+                <action android:name="android.privatedata.MicroPALProviderService" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+
+</manifest>
